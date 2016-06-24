@@ -13,12 +13,6 @@ cache:
     - composer.lock
   save_paths:
     - vendor
-
-tests:
-  - type: phpunit
-    mode: parallel
-    output: exit-status
-    command: vendor/bin/solano-phpunit
-    config: phpunit.xml                    # If not supplied, phpunit.xml and phpunit.xml.dist are defaults
-    files:
-      - tests/**Test.php
+hooks:
+  enumeration: "echo'{\"tests\":null,\"commands\":[{\"type\":\"phpunit\",\"mode\":\"parallel\",\"output\":\"exit-status\",\"command\":\"vendor/bin/solano-phpunit\",\"config\":\"phpunit.xml\",\"files\":[\"tests/**Test.php\"],\"files_expanded\":[\"tests/PoolTest.php\",\"tests/RingBridgeTest.php\",\"tests/Subscriber/MockTest.php\",\"tests/Subscriber/RedirectTest.php\",\"tests/Subscriber/CookieTest.php\",\"tests/Subscriber/PrepareTest.php\",\"tests/Subscriber/HttpErrorTest.php\",\"tests/Subscriber/HistoryTest.php\",\"tests/CollectionTest.php\",\"tests/Message/MessageParserTest.php\",\"tests/Message/ResponseTest.php\",\"tests/Message/MessageFactoryTest.php\",\"tests/Message/AbstractMessageTest.php\",\"tests/Message/RequestTest.php\",\"tests/Message/FutureResponseTest.php\",\"tests/UrlTest.php\",\"tests/UtilsTest.php\",\"tests/TransactionTest.php\",\"tests/BatchResultsTest.php\",\"tests/UriTemplateTest.php\",\"tests/Cookie/CookieJarTest.php\",\"tests/Cookie/SetCookieTest.php\",\"tests/Cookie/SessionCookieJarTest.php\",\"tests/Cookie/FileCookieJarTest.php\",\"tests/MimetypesTest.php\",\"tests/IntegrationTest.php\",\"tests/RequestFsmTest.php\",\"tests/ClientTest.php\",\"tests/Event/AbstractRetryableEventTest.php\",\"tests/Event/ErrorEventTest.php\",\"tests/Event/EmitterTest.php\",\"tests/Event/ListenerAttacherTraitTest.php\",\"tests/Event/HasEmitterTraitTest.php\",\"tests/Event/AbstractTransferEventTest.php\",\"tests/Event/AbstractRequestEventTest.php\",\"tests/Event/RequestEventsTest.php\",\"tests/Event/BeforeEventTest.php\",\"tests/Event/AbstractEventTest.php\",\"tests/Event/ProgressEventTest.php\",\"tests/Post/PostBodyTest.php\",\"tests/Post/PostFileTest.php\",\"tests/Post/MultipartBodyTest.php\",\"tests/QueryParserTest.php\",\"tests/QueryTest.php\",\"tests/Exception/XmlParseExceptionTest.php\",\"tests/Exception/ParseExceptionTest.php\",\"tests/Exception/RequestExceptionTest.php\"]}]}' > test_list.json"
+   
