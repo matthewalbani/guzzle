@@ -15,6 +15,7 @@ cache:
     - vendor
 
 tests:
+  - /bin/true
   - type: phpunit
     mode: parallel
     output: exit-status
