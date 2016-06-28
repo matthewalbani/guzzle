@@ -20,5 +20,11 @@ plan:
   - event
 profiles:
   default:
+    test_pattern:
+      - spec/system/**_spec.rb
   subscriber:
+    test_pattern:
+      - spec/system/**_spec.rb
   event:
+    test_pattern:
+      - spec/system/**_spec.rb
